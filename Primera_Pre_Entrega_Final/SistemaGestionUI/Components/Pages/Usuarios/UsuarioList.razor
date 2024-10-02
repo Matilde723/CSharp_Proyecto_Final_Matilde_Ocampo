@@ -1,0 +1,72 @@
+﻿@page "/usuarios"
+
+@inject UsuarioBussiness UsuarioBussiness  // Inject the business class
+
+<h3>Usuario List</h3>
+
+@if (Usuarios == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>NombreUsuario</th>
+                <th>Mail</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Usuarios)
+            {
+                <tr>
+                    <td>@usuario.Id</td>
+                    <td>@usuario.Nombre</td>
+                    <td>@usuario.Apellido</td>
+                    <td>@usuario.NombreUsuario</td>
+                    <td>@usuario.Mail</td>
+                    <td>
+                        <a href="/usuarios/@usuario.Id/editar">Edit</a>
+                        <button @onclick="() => EliminarUsuario(usuario.Id)" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Usuario> Usuarios;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Usuarios = await UsuarioBussiness.ListarUsuarios();  // Fetch all users
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching Usuarios: {ex.Message}");
+        }
+    }
+
+    private async Task EliminarUsuario(int id)
+    {
+        try
+        {
+            await UsuarioBussiness.EliminarUsuario(id);  // Delete the selected user
+            Usuarios = await UsuarioBussiness.ListarUsuarios();  // Refresh the list
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting Usuario: {ex.Message}");
+        }
+    }
+}

@@ -1,0 +1,68 @@
+﻿@page "/ventas"
+
+@inject VentaBussiness VentaBussiness  // Inject the business class
+
+<h3>Venta List</h3>
+
+@if (Ventas == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Comentarios</th>
+                <th>Id Usuario</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var venta in Ventas)
+            {
+                <tr>
+                    <td>@venta.Id</td>
+                    <td>@venta.Comentarios</td>
+                    <td>@venta.IdUsuario</td>
+                    <td>
+                        <a href="/ventas/@venta.Id/editar">Edit</a>
+                        <button @onclick="() => EliminarVenta(venta.Id)" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Venta> Ventas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Ventas = await VentaBussiness.ListarVentas();  // Fetch all sales
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching Ventas: {ex.Message}");
+        }
+    }
+
+    private async Task EliminarVenta(int id)
+    {
+        try
+        {
+            await VentaBussiness.EliminarVenta(id);  // Delete the selected sale
+            Ventas = await VentaBussiness.ListarVentas();  // Refresh the list
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting Venta: {ex.Message}");
+        }
+    }
+}

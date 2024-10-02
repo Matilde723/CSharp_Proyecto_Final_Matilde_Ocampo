@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SistemaGestionBussiness",
+    "\\SistemaGestionUI",
+    "\\SistemaGestionUI\\Components",
+    "\\SistemaGestionUI\\Components\\Layout",
+    "\\SistemaGestionUI\\Components\\Pages",
+    "\\SistemaGestionUI\\Components\\Pages\\Productos",
+    "\\SistemaGestionUI\\Components\\Pages\\ProductoVendido",
+    "\\SistemaGestionUI\\Components\\Pages\\Usuarios",
+    "\\SistemaGestionUI\\Components\\Pages\\Ventas"
+  ],
+  "SelectedNode": "\\SistemaGestionUI\\Components\\Pages\\Productos\\Productos.razor",
+  "PreviewInSolutionExplorer": false
+}

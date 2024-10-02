@@ -1,0 +1,25 @@
+﻿@page "/productos/new"
+@using SistemaGestionBussiness
+@inject ProductoBussiness ProductoBussiness
+@inject NavigationManager NavigationManager
+
+<h3>Create Producto</h3>
+
+<ProductosForm Producto="Producto" OnValidSubmit="CrearProducto" />
+
+@code {
+    private Producto Producto = new Producto();  // Initialize a new product
+
+    private async Task CrearProducto()
+    {
+        try
+        {
+            await ProductoBussiness.CrearProducto(Producto);  // Call the business logic to create the product
+            NavigationManager.NavigateTo("/productos");  // Navigate back to the products list after saving
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error creating product: {ex.Message}");
+        }
+    }
+}

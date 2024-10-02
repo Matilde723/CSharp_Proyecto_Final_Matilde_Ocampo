@@ -1,0 +1,47 @@
+﻿@page "/ventas/{id:int}/editar"
+
+@inject NavigationManager NavigationManager
+@inject VentaBussiness VentaBussiness  // Inject the business class
+
+<h3>Edit Venta</h3>
+
+@if (Venta == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <VentaForm Venta="Venta" OnValidSubmit="OnEditarVenta" />
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Venta Venta;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Venta = await VentaBussiness.ObtenerVenta(Id);  // Fetch sale by ID
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching Venta: {ex.Message}");
+        }
+    }
+
+    private async Task OnEditarVenta()
+    {
+        try
+        {
+            await VentaBussiness.ModificarVenta(Venta);  // Call business method to update Venta
+            NavigationManager.NavigateTo("/ventas");  // Navigate back to the sales list after saving
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error editing Venta: {ex.Message}");
+        }
+    }
+}
