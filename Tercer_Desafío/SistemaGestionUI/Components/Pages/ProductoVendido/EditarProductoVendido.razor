@@ -1,0 +1,47 @@
+﻿@page "/productosvendidos/{id:int}/editar"
+
+@inject NavigationManager NavigationManager
+@inject ProductoVendidoBussiness ProductoVendidoBussiness  // Inject the business class
+
+<h3>Edit Producto Vendido</h3>
+
+@if (ProductoVendido == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <ProductosVendidosForm ProductoVendido="ProductoVendido" OnValidSubmit="OnEditarProductoVendido" />
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private ProductoVendido ProductoVendido;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ProductoVendido = await ProductoVendidoBussiness.ObtenerProductoVendido(Id);  // Fetch product sold by ID
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching ProductoVendido: {ex.Message}");
+        }
+    }
+
+    private async Task OnEditarProductoVendido()
+    {
+        try
+        {
+            await ProductoVendidoBussiness.ModificarProductoVendido(ProductoVendido);  // Call business method to update ProductoVendido
+            NavigationManager.NavigateTo("/productosvendidos");  // Navigate back to the products sold list after saving
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error editing ProductoVendido: {ex.Message}");
+        }
+    }
+}

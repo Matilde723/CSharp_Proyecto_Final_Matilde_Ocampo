@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SistemaGestionBussiness",
+    "\\SistemaGestionData",
+    "\\SistemaGestionData\\DataAccess",
+    "\\SistemaGestionEntities",
+    "\\SistemaGestionUI",
+    "\\SistemaGestionUI\\Components",
+    "\\SistemaGestionWeb",
+    "\\SistemaGestionWeb\\Controllers"
+  ],
+  "SelectedNode": "\\SistemaGestionData\\DataAccess\\VentaDataAccess.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,70 @@
+﻿@page "/productosvendidos"
+
+@inject ProductoVendidoBussiness ProductoVendidoBussiness  // Inject the business class
+
+<h3>Producto Vendido List</h3>
+
+@if (ProductosVendidos == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Id Producto</th>
+                <th>Stock</th>
+                <th>Id Venta</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var productoVendido in ProductosVendidos)
+            {
+                <tr>
+                    <td>@productoVendido.Id</td>
+                    <td>@productoVendido.IdProducto</td>
+                    <td>@productoVendido.Stock</td>
+                    <td>@productoVendido.IdVenta</td>
+                    <td>
+                        <a href="/productosvendidos/@productoVendido.Id/editar">Edit</a>
+                        <button @onclick="() => EliminarProductoVendido(productoVendido.Id)" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ProductoVendido> ProductosVendidos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ProductosVendidos = await ProductoVendidoBussiness.ListarProductosVendidos();  // Fetch all ProductosVendidos
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching ProductosVendidos: {ex.Message}");
+        }
+    }
+
+    private async Task EliminarProductoVendido(int id)
+    {
+        try
+        {
+            await ProductoVendidoBussiness.EliminarProductoVendido(id);  // Delete the selected ProductoVendido
+            ProductosVendidos = await ProductoVendidoBussiness.ListarProductosVendidos();  // Refresh the list
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting ProductoVendido: {ex.Message}");
+        }
+    }
+}

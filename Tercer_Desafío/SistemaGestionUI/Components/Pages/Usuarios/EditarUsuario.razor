@@ -1,0 +1,47 @@
+﻿@page "/usuarios/{id:int}/editar"
+
+@inject NavigationManager NavigationManager
+@inject UsuarioBussiness UsuarioBussiness  // Inject the business class
+
+<h3>Edit Usuario</h3>
+
+@if (Usuario == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <UsuarioForm Usuario="Usuario" OnValidSubmit="OnEditarUsuario" />
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Usuario Usuario;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Usuario = await UsuarioBussiness.ObtenerUsuario(Id);  // Fetch user by ID
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching Usuario: {ex.Message}");
+        }
+    }
+
+    private async Task OnEditarUsuario()
+    {
+        try
+        {
+            await UsuarioBussiness.ModificarUsuario(Usuario);  // Call business method to update Usuario
+            NavigationManager.NavigateTo("/usuarios");  // Navigate back to the users list after saving
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error editing Usuario: {ex.Message}");
+        }
+    }
+}
