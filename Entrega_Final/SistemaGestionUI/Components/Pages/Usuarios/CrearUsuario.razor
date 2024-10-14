@@ -1,0 +1,25 @@
+﻿@page "/usuarios/new"
+
+@inject NavigationManager NavigationManager
+@inject UsuarioBussiness UsuarioBussiness  // Inject the business class
+
+<h3>Create Usuario</h3>
+
+<UsuarioForm Usuario="Usuario" OnValidSubmit="OnCrearUsuario" />
+
+@code {
+    private Usuario Usuario = new Usuario();  // Initialize a new user
+
+    private async Task OnCrearUsuario()
+    {
+        try
+        {
+            await UsuarioBussiness.CrearUsuario(Usuario);  // Call business method to create Usuario
+            NavigationManager.NavigateTo("/usuarios");  // Navigate back to the users list after saving
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error creating Usuario: {ex.Message}");
+        }
+    }
+}

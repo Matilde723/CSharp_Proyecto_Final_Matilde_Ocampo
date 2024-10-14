@@ -1,0 +1,110 @@
+﻿@page "/productos"
+@using SistemaGestionBussiness
+@inject ProductoBussiness ProductoBussiness
+
+<h3>Productos</h3>
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-6">
+                <a href='/productos/new'>
+                    <button class="btn btn-success">
+                        Nuevo Producto
+                    </button>
+                </a>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-primary" @onclick="ActualizarTotal">
+                    Actualizar Total
+                </button>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Filtrar por..." @bind="filtro" />
+                <button type="button" class="btn btn-outline-secondary" @onclick="Buscar">Buscar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row"></div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Descripcion</th>
+                <th>PrecioCompra</th>
+                <th>PrecioVenta</th>
+                <th>Stock</th>
+                <th>TotalProducto</th>
+                <th>Categoria</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (productos != null)
+            {
+                @foreach (Producto producto in productos)
+                {
+                    <tr>
+                        <td>@producto.Id</td>
+                        <td>@producto.Descripcion</td>
+                        <td>@producto.PrecioCompra</td>
+                        <td>@producto.PrecioVenta</td>
+                        <td>@producto.Stock</td>
+                        <td>@producto.TotalProducto</td>
+                        <td>@producto.Categoria</td>
+                        <td>
+                            <a href="/productos/@producto.Id/Editar" class="btn btn-warning">Editar</a>
+                            <button @onclick="() => EliminarProducto(producto.Id)" class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private List<Producto> productos = new List<Producto>();
+    private string filtro = string.Empty;
+
+    // Fetch the products when the page is initialized
+    protected override async Task OnInitializedAsync()
+    {
+        productos = await ProductoBussiness.ListarProductos();
+    }
+
+    // Delete the product by ID and refresh the list
+    public async Task EliminarProducto(int id)
+    {
+        try
+        {
+            await ProductoBussiness.EliminarProducto(id);
+            productos = await ProductoBussiness.ListarProductos(); // Refresh the list after deletion
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error deleting product: {ex.Message}");
+        }
+    }
+
+    // Filter products by the search input
+    public async Task Buscar()
+    {
+        productos = await ProductoBussiness.ListarProductos();  // Filter logic can be added in the business layer if needed
+        if (!string.IsNullOrEmpty(filtro))
+        {
+            productos = productos.Where(p => p.Descripcion.Contains(filtro, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+    }
+
+    // Update total product prices
+    private async Task ActualizarTotal(MouseEventArgs e)
+    {
+        // Assuming you have a method to update totals in the business layer
+        // await ProductoBussiness.UpdateTotalProductos();
+        productos = await ProductoBussiness.ListarProductos(); // Refresh the list after updating
+    }
+}

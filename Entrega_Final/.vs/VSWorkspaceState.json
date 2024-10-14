@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SistemaGestionBussiness",
+    "\\SistemaGestionData\\Context",
+    "\\SistemaGestionEntities",
+    "\\SistemaGestionUI",
+    "\\SistemaGestionUI\\Components",
+    "\\SistemaGestionWeb",
+    "\\SistemaGestionWeb\\Controllers"
+  ],
+  "SelectedNode": "\\SistemaGestionUI\\Components\\Layout",
+  "PreviewInSolutionExplorer": false
+}

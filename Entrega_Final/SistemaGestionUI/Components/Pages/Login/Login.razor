@@ -1,0 +1,67 @@
+﻿@page "/login"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<h3>Login</h3>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<EditForm Model="authRequest" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <InputText @bind-Value="authRequest.Username" class="form-control" id="username" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <InputText @bind-Value="authRequest.Password" type="password" class="form-control" id="password" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</EditForm>
+
+@code {
+    private AuthRequest authRequest = new AuthRequest();
+    private string errorMessage;
+
+    private async Task HandleLogin()
+    {
+        errorMessage = string.Empty;
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/login", authRequest);
+            if (response.IsSuccessStatusCode)
+            {
+                var authResponse = await response.Content.ReadFromJsonAsync<AuthResponse>();
+                // You can handle storing the token or redirecting here
+                Navigation.NavigateTo("/productos");
+            }
+            else
+            {
+                errorMessage = "Invalid username or password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    public class AuthRequest
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+
+    public class AuthResponse
+    {
+        public string Username { get; set; }
+        public string Token { get; set; }
+    }
+}

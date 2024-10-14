@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionUI\\Components\\Layout\\NavMenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionUI\\Components\\_Imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\Pages\\Login\\Login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionUI\\Components\\Pages\\Login\\Login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionEntities\\AuthRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionEntities\\AuthRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionData\\DataAccess\\AuthDataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionData\\DataAccess\\AuthDataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionBussiness\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionBussiness\\AuthService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionWeb\\Controllers\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionWeb\\Controllers\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionWeb\\Controllers\\ProductoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionWeb\\Controllers\\ProductoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionData\\DataAccess\\VentaDataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SistemaGestionData\\DataAccess\\VentaDataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "SistemaGestionUI\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "SistemaGestionUI\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T00:55:24.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "SistemaGestionUI\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\_Imports.razor",
+              "RelativeToolTip": "SistemaGestionUI\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T00:55:20.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\Pages\\Login\\Login.razor",
+              "RelativeDocumentMoniker": "SistemaGestionUI\\Components\\Pages\\Login\\Login.razor",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionUI\\Components\\Pages\\Login\\Login.razor",
+              "RelativeToolTip": "SistemaGestionUI\\Components\\Pages\\Login\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T00:54:33.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthRequest.cs",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionEntities\\AuthRequest.cs",
+              "RelativeDocumentMoniker": "SistemaGestionEntities\\AuthRequest.cs",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionEntities\\AuthRequest.cs",
+              "RelativeToolTip": "SistemaGestionEntities\\AuthRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T00:51:25.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionData\\DataAccess\\AuthDataAccess.cs",
+              "RelativeDocumentMoniker": "SistemaGestionData\\DataAccess\\AuthDataAccess.cs",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionData\\DataAccess\\AuthDataAccess.cs",
+              "RelativeToolTip": "SistemaGestionData\\DataAccess\\AuthDataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T00:50:26.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionBussiness\\AuthService.cs",
+              "RelativeDocumentMoniker": "SistemaGestionBussiness\\AuthService.cs",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionBussiness\\AuthService.cs",
+              "RelativeToolTip": "SistemaGestionBussiness\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T00:49:13.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionWeb\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "SistemaGestionWeb\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionWeb\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "SistemaGestionWeb\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T00:45:57.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionWeb\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "SistemaGestionWeb\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionWeb\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "SistemaGestionWeb\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T00:45:42.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VentaDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionData\\DataAccess\\VentaDataAccess.cs",
+              "RelativeDocumentMoniker": "SistemaGestionData\\DataAccess\\VentaDataAccess.cs",
+              "ToolTip": "C:\\Users\\matts\\OneDrive\\Documentos\\CoderHouse\\C#\\repos\\CoderHouse_Ejemplos\\Primera_Pre_Entrega_Final\\SistemaGestionData\\DataAccess\\VentaDataAccess.cs",
+              "RelativeToolTip": "SistemaGestionData\\DataAccess\\VentaDataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T00:33:37.881Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

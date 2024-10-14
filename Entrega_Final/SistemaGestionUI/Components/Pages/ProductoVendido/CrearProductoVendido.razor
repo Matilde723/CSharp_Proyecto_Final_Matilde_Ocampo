@@ -1,0 +1,26 @@
+﻿@page "/productosvendidos/new"
+
+@inject NavigationManager NavigationManager
+@inject ProductoVendidoBussiness ProductoVendidoBussiness  // Inject the business class
+
+<h3>Create Producto Vendido</h3>
+
+<ProductosVendidosForm ProductoVendido="ProductoVendido" OnValidSubmit="OnCrearProductoVendido" />
+
+@code {
+    private ProductoVendido ProductoVendido = new ProductoVendido();  // Initialize a new product sold
+
+    private async Task OnCrearProductoVendido()
+    {
+        try
+        {
+            await ProductoVendidoBussiness.CrearProductoVendido(ProductoVendido);  // Call business method to create ProductoVendido
+            NavigationManager.NavigateTo("/productosvendidos");  // Navigate to product sold list after saving
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions that may occur during creation
+            Console.WriteLine($"Error creating ProductoVendido: {ex.Message}");
+        }
+    }
+}
